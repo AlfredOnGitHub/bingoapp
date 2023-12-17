@@ -1,0 +1,40 @@
+{% load static %}
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BINGO THE HEAVEN</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.combootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'bingo_app/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Bingo The Heaven</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <button type="submit" name="nuevo_numero" class="btn btn-primary"> Dar Número Nuevo</button>
+            <button type="submit" name="reiniciar" class="btn btn-danger"> Reiniciar Bingo</button>
+        </form>
+        
+        <div class="numero-actual">
+            {% if numeros_dichos %}
+                <p class="numero-grande">{{ numeros_dichos|last }}</p>
+                {% if numeros_dichos|length > 1 %}
+                    <p class="numero-pequeño">{{ numeros_dichos|slice:"0:-1"|last }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="numeros-dichos">
+            <h2>Números Dichos:</h2>
+            <ul>
+                {% for numero in numeros_dichos %}
+                    <li>{{ numero }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
