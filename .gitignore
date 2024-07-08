@@ -1,4 +1,4 @@
-.exe
-.spec
+*.exe
+*.spec
 /dist/
 /build/
