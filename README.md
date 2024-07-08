@@ -1,3 +1,20 @@
-# Bingo App
+Proyecto aplicación Bingo.
+Desarrollado en Python con Tkinter.
 
-This app will not run unless you specify a secret_key on settings.py or create a local_settings.py file with the SECRET_KEY= var on it.
+## Instalación
+
+1. **Clona el repositorio:**
+
+   ```git clone https://github.com/AlfredOnGitHub/bingoapp.git```
+
+2. **Instala las dependencias:**
+
+    ```pip install -r requirements.txt```
+
+3. **Ejecución**
+
+    ```python main.py```
+
+4. **Contribuciones**
+
+Las contribuciones son bienvenidas. Si encuentras algún problema o deseas agregar nuevas funcionalidades, no dudes en enviar un pull request.
